@@ -47,12 +47,12 @@ main{/*Modificación de los elementos "main" de la página */
 
 div{/*Modificación de todos los elementos "div" de la página */
     width: 30%; /*Se espera que el ancho de todos los elementos "div" sea de 340 pixeles */
-    height: 70vh; /*Se espera que la altura de todos los elementos "div" sea de 510 pixeles */
+    height: 70vh;
     display: inline-flex; /*Se espera que todos los elementos "div" utilicen el modelo de caja flexible en línea para la disposición de sus elementos hijos */
     align-items: flex-end; /*Se espera que los elementos hijos de todos los elementos "div" estén alineados al final del eje transversal (inferior) del contenedor */
     justify-content: center; /*Se espera que los elementos hijos de todos los elementos "div" estén centrados horizontalmente dentro del contenedor */
     border: solid 2px rgb(0, 0, 0); /*Se espera que todos los elementos "div" tengan un borde sólido de 2 pixeles de grosor y de color negro */
-    border-radius: 17px; /*Se espera un borde redondeado notablemente en las esquinas */
+    border-radius: 15px; /*Se espera un borde redondeado notablemente en las esquinas */
     position: relative; /*Preparación para la determinación de la posición de las imágenes, además de fijar la posición de los elementos "div" en su posición "natural" en el documento */
     z-index: 0; /*Se ubica la capa en la que se encuentra los elementos CSS de este selector */
     background: linear-gradient(to top, rgb(245, 234, 46), rgb(255, 69, 0), rgb(0, 100, 255)); /*Se espera que el fondo de todos los elementos "div" se corresponda con un degradado desde abajo hacia arriba, que inicia en el tono de amarillo escojido, pasa por el tono de rojo y termina en el tono de azul */
