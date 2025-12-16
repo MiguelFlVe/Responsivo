@@ -56,6 +56,7 @@
 }
 
 form{
+    font-size: 20px;
     border: 5px solid black;
     display: flex;
     flex-wrap: wrap;
@@ -67,6 +68,7 @@ label, input{
     margin: 5px;
     padding: 5px;
     width: 40%;
+    font-size: 2em;
 }
 
 @media (max-width: 992px){
@@ -100,5 +102,6 @@ label, input{
 
   label, input{
     width: 75%;
+    font-size: 2rem;
   }
 }
