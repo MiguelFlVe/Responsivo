@@ -1,0 +1,468 @@
+*{/* Modificación de todos los elementos de la página */
+    
+    box-sizing: border-box; /*Se define el tamaño de caja con el cual se va a trabajar */
+}
+
+body{
+    background: linear-gradient(to bottom, rgb(0, 100, 255), rgb(255, 69, 0), rgb(245, 234, 46)); /*Se espera que el fondo de todos los elementos se corresponda con un degradado desde arriba hacia abajo, que inicia en el tono de azul escojido, pasa por el tono de rojo y termina en el tono de amarillo */
+}
+
+header{/*Modificación de los elementos "header" de la página */
+    background: rgba(0, 0, 0, 0);
+}
+
+header > p{/*Modificación de los elementos "p" que son hijos directos de los elementos "header" */
+    text-align: center; /*Se espera que el texto al interior de los elementos "p" se encuentre ubicado al centro horizontal de la caja */
+    font-size: 20px; /*Se espera que el texto al interior de los elementos "p" tenga un tamaño de letra de 20 pixeles */
+    font-weight: bold; /*Se espera que el texto al interior de los elementos "p" tenga un grosor de letra negrita */
+    color: rgb(0, 0, 0); /*Se espera que el texto al interior de los elementos "p" tenga un color negro */
+}
+
+.maintitle{ /*Modificación de los elementos pertenencientes a la clase "maintitle" */
+    text-align: center; /*Se espera que el texto al interior de la clase se encuentre ubicado al centro horizontal de la caja */
+    font-size: 32px; /*Se espera que el texto al interior de la clase tenga un tamaño de letra de 32 pixeles */
+    font-weight: bold; /* Se espera que el texto al interior de la clase tenga un grosor de letra negrita */
+    color: rgb(245, 234, 46); /*Se espera que el texto al interior de la clase tenga un color amarillo, específicamente el determinado por la combinación RGB dada */
+    background: linear-gradient(to top, rgb(0, 100, 255), rgb(255, 69, 0)); /*Se espera que el fondo de los elementos al interior de la clase se corresponda con un degradado desde abajo hacia arriba, que inicia en el tono de azul escojido, y termina en el tono de rojo */
+}
+
+main{/*Modificación de los elementos "main" de la página */
+    text-align: center; /*Se espera que el texto al interior de los elementos "main" se encuentre ubicado al centro horizontal de la caja */
+    display: flex; /*Se espera que los elementos "main" utilicen el modelo de caja flexible para la disposición de sus elementos hijos */
+    flex-wrap: wrap; /*Se espera que los elementos hijos de los elementos "main" puedan ajustarse a múltiples líneas si es necesario */
+    gap: 25px; /*Se espera que haya un espacio de 25 pixeles entre los elementos hijos de los elementos "main" */
+    justify-content: center; /*Se espera que los elementos hijos de los elementos "main" estén centrados horizontalmente dentro del contenedor */
+}
+
+div{/*Modificación de todos los elementos "div" de la página */
+    width: 30%; /*Se espera que el ancho de todos los elementos "div" sea de 340 pixeles */
+    height: 70vh; /*Se espera que la altura de todos los elementos "div" sea de 510 pixeles */
+    display: inline-flex; /*Se espera que todos los elementos "div" utilicen el modelo de caja flexible en línea para la disposición de sus elementos hijos */
+    align-items: flex-end; /*Se espera que los elementos hijos de todos los elementos "div" estén alineados al final del eje transversal (inferior) del contenedor */
+    justify-content: center; /*Se espera que los elementos hijos de todos los elementos "div" estén centrados horizontalmente dentro del contenedor */
+    border: solid 2px rgb(0, 0, 0); /*Se espera que todos los elementos "div" tengan un borde sólido de 2 pixeles de grosor y de color negro */
+    border-radius: 17px; /*Se espera un borde redondeado notablemente en las esquinas */
+    position: relative; /*Preparación para la determinación de la posición de las imágenes, además de fijar la posición de los elementos "div" en su posición "natural" en el documento */
+    z-index: 0; /*Se ubica la capa en la que se encuentra los elementos CSS de este selector */
+    background: linear-gradient(to top, rgb(245, 234, 46), rgb(255, 69, 0), rgb(0, 100, 255)); /*Se espera que el fondo de todos los elementos "div" se corresponda con un degradado desde abajo hacia arriba, que inicia en el tono de amarillo escojido, pasa por el tono de rojo y termina en el tono de azul */
+}
+
+div::before{/*Creación de un contenido virtual, para modificar la visualización de elementos */
+    content: ''; /*Se determina que el contenido está vacío */
+    position: absolute; /*Se elimina la posición del elemento del flujo "natural" del documento, y se fija de manera manual */
+    width: 100%; /*Se espera que el ancho del contenido virtual sea del 100% del contenedor padre */
+    height: 100%; /*Se espera que la altura del contenido virtual sea del 100% del contenedor padre */
+    z-index: -1; /*Se ubica la capa en la que se encuentra el contenido virtual, detrás de la capa de los elementos "div" */
+}
+
+.Dokkan::before{/*Modificación del contenido virtual de los elementos pertenecientes a la clase "Dokkan" */
+    background-image: url(../imagenes/14Dokkan.webp); /*Se espera que la imagen de fondo del contenido virtual sea la ubicada en la ruta dada */
+    background-position: center; /*Se espera que la imagen de fondo del contenido virtual esté centrada */
+    background-repeat: no-repeat; /*Se espera que la imagen de fondo del contenido virtual no se repita */
+    background-size: contain; /*Se espera que la imagen de fondo del contenido virtual se ajuste al contenedor sin recortarse */
+}
+
+/* A partir de este punto, las siguientes líneas de código siguen el mismo patrón que el anterior, modificando el contenido virtual de cada clase específica para asignar la imagen correspondiente. Se hará otro comentario para indicar la finalización de esta sección de código */
+
+.A15::before{
+    background-image: url(../imagenes/15Dokkan.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.A17::before{
+    background-image: url(../imagenes/17_Artwork.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.A19::before{
+    background-image: url(../imagenes/Android19.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.A13::before{
+    background-image: url(../imagenes/Androide13normal.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.A16::before{
+    background-image: url(../imagenes/Androide_16.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.A18::before{
+    background-image: url(../imagenes/Androide_18_Artwork.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.Dende::before{
+    background-image: url(../imagenes/Arte_de_Dende_en_Super_Hero.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.Babidi::before{
+    background-image: url(../imagenes/Babidi_Artwork.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.Bardock::before{
+    background-image: url(../imagenes/Bardock_Artwork.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.Beerus::before{
+    background: url(../imagenes/Beerus_DBS_Broly_Artwork.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.Bulma::before{
+    background: url(../imagenes/bulma.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.BuuGordo::before{
+    background: url(../imagenes/BuuGordo_Universo7.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.Cell::before{
+    background: url(../imagenes/celula.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.Milk::before{
+    background: url(../imagenes/ChiChi_DBS.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.Dendejoven::before{
+    background: url(../imagenes/Dende_Artwork.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.Dispo::before{
+    background: url(../imagenes/Dispo_render.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.Dodoria::before{
+    background: url(../imagenes/dodoria.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.DrGero::before{
+    background: url(../imagenes/Dr._Gero_nadroide_20.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.Yamcha::before{
+    background: url(../imagenes/Final_Yamcha.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.Freezer::before{
+    background: url(../imagenes/Freezer.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.Ginyu::before{
+    background: url(../imagenes/ginyu.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.GinyuF::before{
+    background: url(../imagenes/ginyu_force.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.Gohan::before{
+    background: url(../imagenes/gohan.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.Goku::before{
+    background: url(../imagenes/goku_normal.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.Gotenks::before{
+    background: url(../imagenes/Gotenks_Artwork.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.GKS::before{
+    background: url(../imagenes/Gran_Kaio-shin_Artwork.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.GKSama::before{
+    background: url(../imagenes/Gran_kaio_sama12.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.GrandPriest::before{
+    background: url(../imagenes/Grand_priest.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.Jiren::before{
+    background: url(../imagenes/Jiren.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.KSE::before{
+    background: url(../imagenes/kaio-shin_del_este.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.KSN::before{
+    background: url(../imagenes/Kaio-shin_del_norte.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.KSO::before{
+    background: url(../imagenes/Kaio-shin_del_Oeste_Dokkan.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.KSS::before{
+    background: url(../imagenes/Kaio-shin_del_Sur_Dokkan.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.KE::before{
+    background: url(../imagenes/kaio_del_este.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.KN::before{
+    background: url(../imagenes/Kaio_del_Norte.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.KO::before{
+    background: url(../imagenes/Kaio_del_oeste.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.KS::before{
+    background: url(../imagenes/Kaio_del_sur_cuerpo_completo.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.Kibito::before{
+    background: url(../imagenes/Kibito_Artwork.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.KibitoS::before{
+    background: url(../imagenes/Kibito_shin_Artwork.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.Krillin::before{
+    background: url(../imagenes/Krilin_Universo7.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.Lunch::before{
+    background: url(../imagenes/Lunch_traje_de_sirvienta_en_el_manga.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.Marcarita::before{
+    background: url(../imagenes/Marcarita.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.MrSatan::before{
+    background: url(../imagenes/Mr_Satan_DBSuper.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.Nail::before{
+    background: url(../imagenes/Nail_Artwork.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.Piccolo::before{
+    background: url(../imagenes/picolo_normal.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.Raditz::before{
+    background: url(../imagenes/Raditz_artwork_Dokkan.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.Roshi::before{
+    background: url(../imagenes/roshi.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.Ten::before{
+    background: url(../imagenes/Tenshinhan_Universo7.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.Toppo::before{
+    background: url(../imagenes/Toppo.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.Trunks::before{
+    background: url(../imagenes/Trunks_Buu_Artwork.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.Vegeta::before{
+    background: url(../imagenes/vegeta_normal.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.Vermound::before{
+    background: url(../imagenes/Vermoud.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.Whis::before{
+    background: url(../imagenes/Whis_DBS_Broly_Artwork.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.Zarbon::before{
+    background: url(../imagenes/zarbon.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.Zeno::before{
+    background: url(../imagenes/Zeno_Artwork.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/* Finalización de la sección de código que modifica el contenido virtual de cada clase específica */
+
+@media (max-width: 992px){
+    div{
+        width: 40%;
+        height: 50vh;
+    }
+}
+
+h2, p{/*Modificación de los elementos "h2" y "p" de la página */
+    margin: 12px; /*Se espera que todos los elementos "h2" y "p" tengan un margen de 12 pixeles */
+    padding: 8px; /*Se espera que todos los elementos "h2" y "p" tengan un relleno de 8 pixeles */
+    background: rgba(0, 0, 0, 0); /*Se espera que el fondo de todos los elementos "h2" y "p" sea transparente. Esto elimina el fondo determinado por el selector * */
+    background-color: rgba(255, 255, 255, 0.5); /*Se determina un color de fondo blanco semitransparente para todos los elementos "h2" y "p", con el fin de mejorar la visualización de los textos, sin obstruir totalmente la visualización de los elementos detrás de ellos */
+    border-radius: 12px; /*Se espera un borde redondeado moderadamente en las esquinas */
+    color: rgb(0, 0, 0); /*Se espera que el texto al interior de todos los elementos "h2" y "p" tenga un color negro */
+}
