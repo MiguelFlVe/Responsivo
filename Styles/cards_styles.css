@@ -121,3 +121,9 @@ article > .inst::before{
     width: 75%;
   }
 }
+
+@media print{
+  .encabezado, .menuinput, .menulabel, .menu{
+    display: none;
+  }
+}
